@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reportCardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="14dp"
+    android:background="@drawable/bg_glass"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginBottom="13dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="Reported item photo" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/itemMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/itemLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:layout_marginTop="7dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="9dp"
+        android:background="#22FFFFFF" />
+
+    <TextView
+        android:id="@+id/itemStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="● Status: Active"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/itemChangeStatusButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Change Status"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null" />
+
+    <Button
+        android:id="@+id/itemDeleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="Delete Report"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

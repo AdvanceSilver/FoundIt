@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp">
+
+    <!-- SENDER NAME -->
+    <TextView
+        android:id="@+id/txtMessageSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textColor="#C4A9FF"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- MESSAGE BUBBLE -->
+    <TextView
+        android:id="@+id/txtMessageBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="280dp"
+        android:minWidth="55dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:text="Hello!"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:lineSpacingExtra="2dp"
+        android:background="#252536"/>
+
+    <!-- TIME AND MESSAGE RECEIPT -->
+    <LinearLayout
+        android:id="@+id/messageMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:id="@+id/txtMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:30 AM"
+            android:textColor="#858197"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/txtMessageReceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

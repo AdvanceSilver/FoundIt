@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="24dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:text="FoundIt ✨"
+                android:textColor="@color/text_primary"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Liquid Glass Lost &amp; Found Network"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="18dp"/>
+
+            <LinearLayout
+                android:id="@+id/authPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass"
+                android:padding="18dp">
+
+                <TextView
+                    android:text="Welcome to FoundIt"
+                    android:textColor="@color/text_primary"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Sign in or create an account to share reports."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"/>
+
+                <EditText
+                    android:id="@+id/passwordInput"
+                    android:hint="Password (6+ characters)"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:background="@drawable/bg_input"
+                    android:padding="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:id="@+id/loginButton"
+                    android:text="SIGN IN"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="14dp"/>
+
+                <Button
+                    android:id="@+id/signupButton"
+                    android:text="CREATE ACCOUNT"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homePanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/homeSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/openLostDashboardButton"
+                        android:text="🚨  LOST ITEMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="76dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_lost_glass"
+                        android:backgroundTint="@null"
+                        android:textColor="#FF7183"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:stateListAnimator="@null"/>
+
+                    <Button
+                        android:id="@+id/openFoundDashboardButton"
+                        android:text="✓  FOUND ITEMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="76dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/bg_found_glass"
+                        android:backgroundTint="@null"
+                        android:textColor="#55D995"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:stateListAnimator="@null"/>
+
+                    <Button
+                        android:id="@+id/reportLostButton"
+                        android:text="+  REPORT LOST ITEM"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/bg_lost_glass"
+                        android:backgroundTint="@null"
+                        android:textColor="#FF7183"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:stateListAnimator="@null"/>
+
+                    <Button
+                        android:id="@+id/reportFoundButton"
+                        android:text="+  REPORT FOUND ITEM"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/bg_found_glass"
+                        android:backgroundTint="@null"
+                        android:textColor="#55D995"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:stateListAnimator="@null"/>
+
+                    <!-- EXPLORE MAP CARD -->
+
+                    <LinearLayout
+                        android:id="@+id/openMapCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_glass"
+                        android:padding="16dp"
+                        android:layout_marginTop="22dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:elevation="2dp">
+
+                        <TextView
+                            android:text="⌖"
+                            android:textColor="#C4A5FF"
+                            android:textSize="32sp"
+                            android:gravity="center"
+                            android:background="#302344"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="14dp">
+
+                            <TextView
+                                android:text="Explore Map"
+                                android:textColor="@color/text_primary"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Discover lost and found items around you"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:text="›"
+                            android:textColor="#C4A5FF"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- EXPLORE SECTION -->
+
+                <LinearLayout
+                    android:id="@+id/exploreSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:text="DISCOVER"
+                        android:textColor="#A78BFA"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Explore FoundIt"
+                        android:textColor="@color/text_primary"
+                        android:textSize="27sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:text="Search for missing belongings or help someone find theirs."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_glass"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="12dp">
+
+                        <TextView
+                            android:text="⌕"
+                            android:textColor="#A78BFA"
+                            android:textSize="27sp"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/searchInput"
+                            android:hint="Search phones, keys, documents..."
+                            android:singleLine="true"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_secondary"
+                            android:textSize="14sp"
+                            android:background="@null"
+                            android:padding="8dp"
+                            android:imeOptions="actionSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="Browse categories"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="9dp"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:clipToPadding="false">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/categoryGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            app:selectionRequired="false"
+                            app:chipSpacingHorizontal="8dp">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipAll"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:text="✨ All"
+                                android:checked="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipDocuments"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:text="📄 Documents"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipElectronics"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:text="📱 Electronics"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipKeys"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:text="@string/keys"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipOthers"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:text="📦 Others"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:text="Browse by status"
+                        android:textColor="@color/text_primary"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"/>
+
+                    <TextView
+                        android:text="Choose what you are looking for"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="13dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_lost_glass"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:text="🚨"
+                            android:textSize="27sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Lost something?"
+                            android:textColor="#FF7183"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:text="Browse items reported missing by people around you."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp"
+                            android:lineSpacingExtra="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"/>
+
+                        <Button
+                            android:id="@+id/exploreLostButton"
+                            android:text="Explore Lost Items  →"
+                            android:textAllCaps="false"
+                            android:textColor="#FF7183"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/bg_lost_glass"
+                            android:backgroundTint="@null"
+                            android:stateListAnimator="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="13dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_found_glass"
+                        android:padding="16dp"
+                        android:layout_marginTop="13dp">
+
+                        <TextView
+                            android:text="✨"
+                            android:textSize="27sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Found something?"
+                            android:textColor="#55D995"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:text="See items that others have found and reported."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp"
+                            android:lineSpacingExtra="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"/>
+
+                        <Button
+                            android:id="@+id/exploreFoundButton"
+                            android:text="Explore Found Items  →"
+                            android:textAllCaps="false"
+                            android:textColor="#55D995"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/bg_found_glass"
+                            android:backgroundTint="@null"
+                            android:stateListAnimator="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="13dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="Every discovery brings someone closer to what they lost. 💜"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lostDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/lostBackButton"
+                        android:text="← BACK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"/>
+
+                    <TextView
+                        android:text="🚨 Lost Items"
+                        android:textColor="@color/lost"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/lostRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/foundDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/foundBackButton"
+                        android:text="← BACK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"/>
+
+                    <TextView
+                        android:text="✅ Found Items"
+                        android:textColor="@color/found"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/foundRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notificationsSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:text="Notifications 🔔"
+                        android:textColor="@color/text_primary"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Your report activity and updates will appear here. Notification features are coming in the next step."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"/>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/profile_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_glass"
+        android:visibility="gone"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:elevation="12dp">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:text="Home"
+            android:drawableTop="@drawable/ic_nav_home"
+            android:drawablePadding="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:fontFamily="sans"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/navExplore"
+            android:text="Explore"
+            android:drawableTop="@drawable/ic_nav_explore"
+            android:drawablePadding="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:fontFamily="sans"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/navReport"
+            android:text="Report"
+            android:drawableTop="@drawable/ic_nav_report"
+            android:drawablePadding="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:fontFamily="sans"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/navChats"
+            android:text="Chat"
+            android:drawableTop="@drawable/ic_nav_chat"
+            android:drawablePadding="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:fontFamily="sans"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/navNotifications"
+            android:text="Alerts"
+            android:drawableTop="@drawable/ic_nav_alert"
+            android:drawablePadding="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:fontFamily="sans"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"/>
+
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/navProfilePhoto"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_nav_profile"
+                android:scaleType="centerCrop"
+                android:background="@null"
+                android:contentDescription="Profile photo"/>
+
+            <TextView
+                android:id="@+id/navProfileLabel"
+                android:text="Profile"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

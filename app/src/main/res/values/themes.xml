@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FoundIt"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/purple</item>
+        <item name="colorSecondary">@color/found</item>
+
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:fontFamily">sans</item>
+
+        <!-- Keyboard and system window handling -->
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowActionModeOverlay">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+    </style>
+
+</resources>

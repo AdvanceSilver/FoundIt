@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profileSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <!-- HEADER -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY PROFILE"
+        android:textColor="#A78BFA"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your space."
+        android:textColor="@color/text_primary"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage your identity and track your activity on FoundIt."
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- PROFILE HERO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_glass"
+        android:padding="20dp">
+
+        <FrameLayout
+            android:layout_width="116dp"
+            android:layout_height="116dp">
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_camera"
+                android:scaleType="centerCrop"
+                android:contentDescription="Profile picture"/>
+
+            <!-- CLICKABLE EDIT PENCIL -->
+            <TextView
+                android:id="@+id/editProfilePhotoButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="bottom|end"
+                android:gravity="center"
+                android:text="✎"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:background="@drawable/bg_glass"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:elevation="8dp"
+                android:contentDescription="Edit profile picture"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your FoundIt identity"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="13dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep your profile updated"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/chooseProfilePhotoButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:text="CHANGE PROFILE PHOTO"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- STATISTICS -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOUR ACTIVITY"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <!-- TOTAL -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_glass"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/profileTotalReports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#A78BFA"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <!-- LOST -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_glass"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/profileLostReports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FF7183"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lost"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <!-- FOUND -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_glass"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/profileFoundReports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#55D995"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Found"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- EDIT PROFILE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_glass"
+        android:padding="17dp"
+        android:layout_marginTop="23dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textColor="@color/text_primary"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="17dp"/>
+
+        <EditText
+            android:id="@+id/usernameInput"
+            android:hint="Enter your username"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Me"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/bioInput"
+            android:hint="Tell people a little about yourself..."
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="3"
+            android:maxLines="5"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="7dp"/>
+
+        <Button
+            android:id="@+id/saveProfileButton"
+            android:text="SAVE CHANGES"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/profileStatus"
+            android:text=""
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+    <!-- MY REPORTS -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Reports"
+        android:textColor="@color/text_primary"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginTop="27dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All the items you have reported on FoundIt."
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="13dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myReportsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"/>
+
+    <!-- ACCOUNT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_glass"
+        android:padding="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign out of your FoundIt account on this device."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:text="LOG OUT"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

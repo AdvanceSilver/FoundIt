@@ -1,0 +1,11 @@
+<resources>
+    <color name="background">#0B0812</color>
+    <color name="surface">#191522</color>
+    <color name="surface2">#24202E</color>
+    <color name="stroke">#51485E</color>
+    <color name="purple">#8B7CFF</color>
+    <color name="text_primary">#F7F3FF</color>
+    <color name="text_secondary">#B9B1C8</color>
+    <color name="lost">#FF5474</color>
+    <color name="found">#20C997</color>
+</resources>

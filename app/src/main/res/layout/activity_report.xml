@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reportRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:paddingBottom="12dp"
+    android:scrollbars="none"
+    android:descendantFocusability="afterDescendants">
+
+    <LinearLayout
+        android:id="@+id/reportFormContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="32dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:id="@+id/reportHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report an item"
+            android:textColor="@color/text_primary"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="7dp" />
+
+        <TextView
+            android:id="@+id/reportSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help someone find their missing item."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginBottom="22dp" />
+
+        <!-- Item name -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ITEM NAME"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="e.g. Wallet, keys or phone"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="14sp" />
+
+        <!-- Category -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORY"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+
+        <!-- Location -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENERAL LOCATION"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/locationInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="e.g. Near a college or bus stop"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share only a general area, not your home address."
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:layout_marginTop="5dp" />
+
+        <!-- Choose exact item location on map -->
+
+        <Button
+            android:id="@+id/mapLocationButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="⌖  CHOOSE LOCATION ON MAP"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mapCoordinateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No map location selected (optional)"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:layout_marginTop="6dp" />
+
+        <!-- Date -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATE (OPTIONAL)"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/dateInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="e.g. 5 Nov 2026"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="14sp" />
+
+        <!-- Description -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:gravity="top"
+            android:hint="Describe the item and any safe identifying details..."
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="4"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:padding="15dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do not include phone numbers, private IDs or sensitive personal information."
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:layout_marginTop="6dp" />
+
+        <!-- Photo upload -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ITEM PHOTO"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp" />
+
+        <Button
+            android:id="@+id/photoButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="9dp"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="＋  SELECT PHOTO"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a clear photo of the item. This is optional."
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginTop="7dp" />
+
+        <ImageView
+            android:id="@+id/photoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/bg_glass"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Selected item photo" />
+
+        <Button
+            android:id="@+id/removePhotoButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="REMOVE PHOTO"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <!-- Publish -->
+
+        <Button
+            android:id="@+id/publishButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="PUBLISH REPORT"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please check your details before publishing."
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>
